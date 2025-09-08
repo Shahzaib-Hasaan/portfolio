@@ -9,6 +9,8 @@ export const profileData = {
   tagline: "I design intelligent systems that optimize workflows and reduce manual effort.",
   profileImage: "/profileImg.jpg", // Profile image path
 
+
+  
   social: {
     github: "https://github.com/Shahzaib-Hasaan",
     linkedin: "https://www.linkedin.com/in/shahzaib-ai-developer/",
