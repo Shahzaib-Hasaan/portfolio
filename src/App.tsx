@@ -17,7 +17,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         {/* The change is on the next line */}
-        <BrowserRouter basename="/portfolio/">
+        <BrowserRouter basename="/">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
@@ -31,3 +31,4 @@ const App = () => (
 );
 
 export default App;
+
