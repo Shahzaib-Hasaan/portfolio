@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/portfolio/',
+  // THIS IS THE LINE THAT MUST BE CHANGED
+  base: '/',
 
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
@@ -18,3 +19,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+
