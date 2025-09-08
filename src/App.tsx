@@ -30,7 +30,8 @@ const App = () => (
   </HelmetProvider>
 );
 
-
+// Final deployment trigger
+// const queryClient = new QueryClient();
 
 
 export default App;
