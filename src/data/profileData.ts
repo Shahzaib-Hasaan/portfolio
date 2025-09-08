@@ -2,17 +2,17 @@
 export const profileData = {
   name: "Shahzaib Hassan",
   title: "AI Automation Developer",
-  email: "contact@shahzaibhassan.com",
+  email: "contact@shahzaibai.site",
   phone: "+923027701345",
   location: "Pakistan",
   summary: "Expertise in designing systems to optimize workflows using Python, AI agents, n8n, and LangChain. Grounded in classical AI for robust and impactful solutions.",
   tagline: "I design intelligent systems that optimize workflows and reduce manual effort.",
-  profileImage: "/placeholder.svg", // Update with actual image path
-  
+  profileImage: "/profileImg.jpg", // Profile image path
+
   social: {
-    github: "https://github.com/shahzaibhassan",
-    linkedin: "https://linkedin.com/in/shahzaibhassan",
-    twitter: "https://twitter.com/shahzaibhassan",
+    github: "https://github.com/Shahzaib-Hasaan",
+    linkedin: "https://www.linkedin.com/in/shahzaib-ai-developer/",
+    // twitter: "https://twitter.com/shahzaibhassan",
     whatsapp: "https://wa.me/923027701345",
   },
   
