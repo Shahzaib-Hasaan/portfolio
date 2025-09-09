@@ -10,23 +10,12 @@ const Hero = () => {
     const element = typewriterRef.current;
     if (!element) return;
 
-    let index = 0;
-    element.textContent = '';
-
-    const typeWriter = () => {
-      if (index < text.length) {
-        element.textContent = text.substring(0, index + 1);
-        index++;
-        setTimeout(typeWriter, 50);
-      }
-    };
-
-    const timer = setTimeout(typeWriter, 1000);
-    return () => clearTimeout(timer);
+    // Display the full text immediately instead of typewriter effect
+    element.textContent = text;
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="home" className="min-h-[95vh] flex items-center justify-center relative overflow-hidden pt-8">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 animate-glow" />
       
@@ -48,43 +37,42 @@ const Hero = () => {
             />
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fadeInUp">
+          <h1 className="text-4xl md:text-6xl font-bold mb-3 animate-fadeInUp">
             Hi, I'm <span className="text-gradient">{profileData.name.split(' ')[0]}</span>
           </h1>
           
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-6 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <span className="relative inline-block">
               <span className="absolute -inset-1 -skew-y-3 bg-primary/10 rounded-lg" aria-hidden="true"></span>
               <span className="relative">{profileData.title}</span>
             </span>
           </p>
 
-          <div className="min-h-[80px] mb-8 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            <div className="relative inline-block px-4 py-2 rounded-md bg-background/50 backdrop-blur-sm border border-accent/10 shadow-md">
-              <span ref={typewriterRef} className="text-lg md:text-xl text-foreground/90 typewriter inline-block max-w-full font-medium"></span>
-              <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-accent animate-pulse rounded-full"></span>
+          <div className="min-h-[60px] mb-6 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+            <div className="typewriter-container">
+              <span ref={typewriterRef} className="text-lg md:text-xl typewriter max-w-full"></span>
             </div>
           </div>
 
-          <div className="flex gap-6 justify-center animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-            <a href="#portfolio" className="btn-primary relative overflow-hidden group px-6 py-3 rounded-lg">
+          <div className="flex gap-4 justify-center animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
+            <a href="#portfolio" className="btn-primary relative overflow-hidden group px-5 py-2 rounded-lg text-sm">
               <span className="absolute inset-0 w-0 bg-accent/20 transition-all duration-300 ease-out group-hover:w-full"></span>
               <span className="relative flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
                 View My Work
               </span>
             </a>
-            <a href="#contact" className="btn-secondary relative overflow-hidden group px-6 py-3 rounded-lg">
+            <a href="#contact" className="btn-secondary relative overflow-hidden group px-5 py-2 rounded-lg text-sm">
               <span className="absolute inset-0 w-0 bg-primary/20 transition-all duration-300 ease-out group-hover:w-full"></span>
               <span className="relative flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 Get In Touch
               </span>
             </a>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="text-muted-foreground" size={32} />
         </div>
       </div>

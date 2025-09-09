@@ -47,7 +47,7 @@ const Chatbot = () => {
     setInputMessage('');
     setIsTyping(true);
 
-    const apiUrl = 'https://awsn8n.shahzaibhassan.site/webhook/chat-portfolio';
+    const apiUrl = 'https://vip-n8n.cartnexa.shop/webhook/chat-portfolio';
 
     try {
       const response = await fetch(apiUrl, {

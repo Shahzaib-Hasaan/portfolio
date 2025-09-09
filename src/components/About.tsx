@@ -27,13 +27,13 @@ const About = () => {
       icon: BookOpen,
       title: 'AI/Python Instructor',
       period: 'June 2024 - Present',
-      description: 'Teaching practical labs on Python, NLP, EDA, and GANs. Empowering students with hands-on AI knowledge.',
+      description: 'Helping students explore Python and AI, guiding them to build confidence, think critically, and grow as problem-solvers.'
     },
     {
       icon: Code,
       title: 'AI & Automation Specialist',
-      period: 'March 2025 - August 2025',
-      description: 'Building systems for lead generation and GBP automation for HVAC businesses using n8n, LangChain, and Python.',
+      period: 'Jan 2025 - Present',
+      description: 'Designing intelligent automations for lead generation and Google Business Profile workflows. Transforming complex business processes into smooth, efficient systems with n8n, LangChain, and Python.',
     },
     {
       icon: Sparkles,
